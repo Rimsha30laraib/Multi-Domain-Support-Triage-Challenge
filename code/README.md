@@ -104,7 +104,6 @@ Results → `support_tickets/output.csv`
 | Decision | Rationale |
 |---|---|
 | **Hybrid TF-IDF + Semantic** | TF-IDF catches exact keyword matches (e.g. error codes), semantic handles paraphrase/intent. Best of both worlds. |
-| **α = 0.45** | Slight semantic bias; tune per corpus. |
 | **Heuristic escalation gate** | Fast regex pass catches high-risk tickets before any LLM call — safer and cheaper. |
 | **Structured JSON output prompt** | Constrains the LLM to produce parseable output with validated fields. Fallback escalates on parse failure. |
 | **No live web calls** | All retrieval is from local `data/` directory only — per challenge requirements. |
@@ -115,7 +114,5 @@ Results → `support_tickets/output.csv`
 
 | Parameter | Location | Effect |
 |---|---|---|
-| `ALPHA` | top of `main.py` | 0 = pure semantic, 1 = pure TF-IDF |
 | `TOP_K` | top of `main.py` | More docs = richer context, slower |
-| `CHUNK_SIZE` | top of `main.py` | Larger = more context per chunk, fewer chunks |
 | `ESCALATION_PATTERNS` | top of `main.py` | Add/remove risk keywords |
