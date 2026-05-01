@@ -3,8 +3,11 @@
 Build a terminal-based support triage agent that can handle support tickets across three ecosystems:
 
 HackerRank Support: https://support.hackerrank.com/
+
 Claude Help Center: https://support.claude.com/en/
+
 Visa Support: https://www.visa.co.in/support.html
+
 Your agent must use only the provided support corpus to understand the issue, decide whether it can be answered safely, and determine when it should be escalated to a human.
 
 For each issue, the agent should:
