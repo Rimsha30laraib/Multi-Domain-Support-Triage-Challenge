@@ -1,0 +1,5 @@
+# requirements — Groq Support Triage Agent
+groq>=0.9.0
+sentence-transformers>=2.7.0
+scikit-learn>=1.4.0
+numpy>=1.26.0
